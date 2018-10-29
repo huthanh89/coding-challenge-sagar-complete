@@ -1,0 +1,56 @@
+{
+  "name": "code-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "express": "^4.16.4",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^4.0.1",
+    "gulp-livereload": "^4.0.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-open": "^3.0.1",
+    "gulp-order": "^1.2.0",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "merge-stream": "^1.0.1",
+    "moment": "2.22.1",
+    "node-fetch": "^2.2.0",
+    "nodemon": "^1.18.4",
+    "path": "^0.12.7",
+    "prop-types": "15.6.2",
+    "react": "16.4.0",
+    "react-dom": "16.4.0",
+    "react-redux": "5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "redux": "4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "2.2.0",
+    "webpack": "^4.23.0",
+    "webpack-stream": "^5.1.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "16.1.0",
+    "flow-bin": "0.73.0",
+    "husky": "0.14.3",
+    "lint-staged": "7.1.2",
+    "prettier": "1.12.1"
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "config:precommit": "node node_modules/husky/bin/install.js",
+    "flow": "./node_modules/.bin/flow",
+    "precommit": "yarn flow && lint-staged",
+    "start": "react-scripts start"
+  }
+}
