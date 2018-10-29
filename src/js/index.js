@@ -26,13 +26,13 @@ const store = createStore(
 $( document ).ready(function() {
     render(
         <Provider store={store}>
-            <Router>
+            <Router basename={'/uber/'}>
                 <Route 
-                    path="/" 
-                    component={App} 
+                path="/" 
+                component={App} 
                 />
             </Router>
-        </Provider>,
+    </Provider>,
         $('#root')[0]
     );
 });
