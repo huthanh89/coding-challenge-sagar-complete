@@ -27,6 +27,10 @@ app.get('/show', function(req, res){
     res.render('index.html');
 });
 
+app.get('/*', function(req, res){
+    res.redirect("/uber/");
+});
+
 // Listen app on the following port.
 
 app.listen(4000, () => console.log('App listening on port 4000'))
