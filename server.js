@@ -16,7 +16,7 @@ app.set("views", path.join(__dirname, "public"));
 
 app.set('view engine', 'html');
 
-app.use('/', express.static(__dirname + '/public'));
+app.use('/',     express.static(__dirname + '/public'));
 app.use('/show', express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
@@ -25,10 +25,6 @@ app.get('/', function(req, res){
 
 app.get('/show', function(req, res){
     res.render('index.html');
-});
-
-app.get('/*', function(req, res){
-    res.redirect("/uber/");
 });
 
 // Listen app on the following port.
