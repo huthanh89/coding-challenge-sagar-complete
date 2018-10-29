@@ -73,7 +73,7 @@ gulp.task('reload', () => {
 gulp.task('browser', () => {
     return gulp.src(__filename)
     .pipe(open({
-        uri: 'http://localhost:3000'
+        uri: 'http://localhost:4000'
     }));
 });
 
