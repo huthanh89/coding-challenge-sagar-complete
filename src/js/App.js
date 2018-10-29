@@ -10,9 +10,14 @@ import { Route } from "react-router-dom";
 //-----------------------------------------------------------------------------//
 
 class App extends Component {
+
   render() {
+
+    console.log(this);
+
     return (
       <div className="App container">
+        <Route exact path="/uber" component={Login} />
         <Route exact path="/" component={Login} />
         <Route path="/show"   component={Show} />
       </div>
